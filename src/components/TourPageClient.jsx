@@ -11,7 +11,7 @@ const TourPageClient = ({ tourData }) => {
   };
 
   return (
-    <div className="absolute z-10 bottom-12 grid grid-cols-1 sm:grid-cols-3 md:gap-4 gap-3 w-11/12 max-w-4xl px-4">
+    <div className="absolute z-10 grid grid-cols-1 sm:grid-cols-3 md:gap-4 gap-2 w-11/12 max-w-4xl px-2 md:px-4 flex items-center justify-center">
       {tourData.map((item, index) => (
         <TourButtons
           key={index}

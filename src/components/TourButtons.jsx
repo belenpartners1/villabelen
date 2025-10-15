@@ -16,7 +16,7 @@ export const TourButtons = ({ label, uri, img, onOpen }) => {
       onClick={() => onOpen()}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className="group relative flex flex-col items-center justify-end md:h-60 h-24 w-full md:w-60 rounded-2xl border border-white/30 backdrop-blur-md text-white shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer bg-cover bg-center overflow-hidden p-4"
+      className="group relative flex flex-col items-center justify-center md:h-60 h-12 w-full md:w-60 rounded-2xl border border-white/30 backdrop-blur-md text-white shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer bg-cover bg-center overflow-hidden p-4"
       style={{
         backgroundImage: `url(${img})`,
         filter: "brightness(1.1) contrast(1.1) saturate(1.1) grayscale(100%)",
