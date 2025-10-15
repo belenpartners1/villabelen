@@ -30,7 +30,7 @@ const Home = () => {
       </Link>
 
       {/* 🧭 Butonlar */}
-      <div className="relative z-10 grid grid-cols-1 sm:grid-cols-3 md:gap-4 gap-2 w-11/12 max-w-3xl px-4">
+      <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 md:gap-4 gap-2 w-11/12 max-w-3xl px-4">
         {clickableLink.map((link, index) => (
           <NavButton key={index} href={link.href} label={link.label} />
         ))}

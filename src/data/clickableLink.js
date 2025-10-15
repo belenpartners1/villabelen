@@ -8,6 +8,10 @@ export const clickableLink = [
     label: "Sanal Tur",
   },
   {
+    href: "/video",
+    label: "Video",
+  },
+  {
     href: "/location",
     label: "Lokasyon",
   },
