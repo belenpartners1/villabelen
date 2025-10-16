@@ -1,7 +1,8 @@
 {
   "pages": [
-    "/catalog/kapakon.png",
-    "/catalog/kapakarka.png",
+    "/catalog/arkakapaksol.png",
+    "/catalog/arkakapaksag.png",
+    "/catalog/1 (1).webp",
     "/catalog/1 (2).webp",
     "/catalog/1 (3).webp",
     "/catalog/1 (4).webp",
@@ -118,7 +119,8 @@
     "/catalog/1 (115).webp",
     "/catalog/1 (116).webp",
     "/catalog/1 (117).webp",
-    "/catalog/arkakapaksol.png",
-    "/catalog/arkakapaksag.png"
+    "/catalog/1 (118).webp",
+    "/catalog/kapakon.png",
+    "/catalog/kapakarka.png"
   ]
 }
