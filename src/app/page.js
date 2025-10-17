@@ -6,6 +6,10 @@ import Link from "next/link";
 const Home = () => {
   return (
     <div className="w-full min-h-screen overflow-hidden relative flex items-center md:items-end justify-center pb-4 md:pb-10 ">
+      <h1 className="hidden">
+        Beytepe Satılık Villa Ankara - Villa Satılık Beytepe Ankara
+      </h1>
+
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
