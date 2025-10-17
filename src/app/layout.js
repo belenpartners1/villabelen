@@ -13,6 +13,7 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: "Villa Belen",
+  favicon: "/belenfav.png",
   description:
     "Beytepe Satılık Villa - Beytepe Villa Satılık - Satılık Villa Beytepe - Satılık Beytepe Villa - Villa Satılık Beytepe - Villa Beytepe Satılık - Ankara - Turkey",
   keywords:
