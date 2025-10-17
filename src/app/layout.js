@@ -13,7 +13,10 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: "Villa Belen",
-  favicon: "/belenfav.png",
+  icons: {
+    icon: [{ url: "/belenfav.png", type: "image/png" }],
+    shortcut: "/favicon.ico", // tarayıcı sekmelerinde standart
+  },
   description:
     "Beytepe Satılık Villa - Beytepe Villa Satılık - Satılık Villa Beytepe - Satılık Beytepe Villa - Villa Satılık Beytepe - Villa Beytepe Satılık - Ankara - Turkey",
   keywords:
@@ -22,7 +25,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" favicon="/favicon.png">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
