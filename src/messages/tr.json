@@ -20,5 +20,8 @@
     "logoAlt": "Villa Belen Logo",
     "back": "Geri",
     "homePage": "Ana Sayfa"
+  },
+  "video": {
+    "url": "/outputvillabelen.mp4"
   }
 }

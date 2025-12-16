@@ -1,13 +1,13 @@
-'use client';
+"use client";
 
-import { usePathname, useRouter } from '@/i18n/routing';
-import { useParams } from 'next/navigation';
-import { useState } from 'react';
+import { usePathname, useRouter } from "@/i18n/routing";
+import { useParams } from "next/navigation";
+import { useState } from "react";
 
 const languages = [
-  { code: 'tr', name: 'Türkçe', flag: '🇹🇷' },
-  { code: 'en', name: 'English', flag: '🇬🇧' },
-  { code: 'ar', name: 'العربية', flag: '🇸🇦' },
+  { code: "tr", name: "Türkçe", flag: "🇹🇷" },
+  // { code: 'en', name: 'English', flag: '🇬🇧' },
+  { code: "ar", name: "العربية", flag: "🇸🇦" },
 ];
 
 export default function LanguageSwitcher() {
@@ -16,8 +16,9 @@ export default function LanguageSwitcher() {
   const params = useParams();
   const [isOpen, setIsOpen] = useState(false);
 
-  const currentLocale = params.locale || 'tr';
-  const currentLanguage = languages.find(lang => lang.code === currentLocale) || languages[0];
+  const currentLocale = params.locale || "tr";
+  const currentLanguage =
+    languages.find((lang) => lang.code === currentLocale) || languages[0];
 
   const handleLanguageChange = (locale) => {
     router.push(pathname, { locale });
@@ -33,12 +34,19 @@ export default function LanguageSwitcher() {
         <span className="text-xl">{currentLanguage.flag}</span>
         <span className="hidden sm:inline">{currentLanguage.name}</span>
         <svg
-          className={`w-4 h-4 transition-transform ${isOpen ? 'rotate-180' : ''}`}
+          className={`w-4 h-4 transition-transform ${
+            isOpen ? "rotate-180" : ""
+          }`}
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
         >
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M19 9l-7 7-7-7"
+          />
         </svg>
       </button>
 
@@ -49,7 +57,7 @@ export default function LanguageSwitcher() {
               key={lang.code}
               onClick={() => handleLanguageChange(lang.code)}
               className={`w-full px-4 py-3 flex items-center gap-3 hover:bg-white/50 transition-colors ${
-                lang.code === currentLocale ? 'bg-white/30 font-semibold' : ''
+                lang.code === currentLocale ? "bg-white/30 font-semibold" : ""
               }`}
             >
               <span className="text-xl">{lang.flag}</span>
