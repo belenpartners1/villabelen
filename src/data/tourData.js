@@ -1,32 +1,32 @@
 export const tourData = [
   {
-    label: "Dış Mekan",
+    labelKey: "tour.outdoor",
     uri: "/34535",
     img: "/F.garden.webp",
   },
   {
-    label: "-2. Kat",
+    labelKey: "tour.basement2",
     uri: "/34308",
     img: "/A.basement.jpg",
   },
   {
-    label: "-1. Kat",
+    labelKey: "tour.basement1",
     uri: "/34390",
     img: "/B.upper_basement.jpg",
   },
   {
-    label: "Zemin Kat",
+    labelKey: "tour.groundFloor",
     uri: "/34214",
     img: "/C.ground_floor.jpg",
   },
 
   {
-    label: "1. Kat",
+    labelKey: "tour.firstFloor",
     uri: "/34282",
     img: "/D.first_floor.jpg",
   },
   {
-    label: "Çatı Katı",
+    labelKey: "tour.roofFloor",
     uri: "/34320",
     img: "/E.roof_floor.jpg",
   },

@@ -1,13 +1,23 @@
 import NavButton from "@/components/NavButton";
-import { clickableLink } from "@/data/clickableLink";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslations } from 'next-intl';
 
 const Home = () => {
+  const t = useTranslations();
+
+  const navLinks = [
+    { href: "/catalog", label: t('nav.catalog') },
+    { href: "/tour", label: t('nav.tour') },
+    { href: "/video", label: t('nav.video') },
+    { href: "/location", label: t('nav.location') },
+  ];
+
   return (
     <div className="w-full min-h-screen overflow-hidden relative flex items-center md:items-end justify-center pb-4 md:pb-10 ">
       <h1 className="hidden">
-        Beytepe Satılık Villa Ankara - Villa Satılık Beytepe Ankara
+        {t('home.title')}
       </h1>
 
       <div
@@ -18,6 +28,11 @@ const Home = () => {
         }}
       ></div>
 
+      {/* Language Switcher */}
+      <div className="absolute top-4 left-4 md:top-8 md:left-8 z-20">
+        <LanguageSwitcher />
+      </div>
+
       <Link
         href="https://belenandpartners.com/"
         target="_blank"
@@ -26,7 +41,7 @@ const Home = () => {
       >
         <Image
           src="/logo.png"
-          alt="Villa Belen Logo"
+          alt={t('common.logoAlt')}
           width={160}
           height={160}
           className="w-36 md:w-44"
@@ -35,7 +50,7 @@ const Home = () => {
 
       {/* 🧭 Butonlar */}
       <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 md:gap-4 gap-2 w-11/12 max-w-3xl px-4">
-        {clickableLink.map((link, index) => (
+        {navLinks.map((link, index) => (
           <NavButton key={index} href={link.href} label={link.label} />
         ))}
       </div>

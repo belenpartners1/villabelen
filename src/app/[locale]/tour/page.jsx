@@ -21,7 +21,7 @@ async function TourContent({ searchParams }) {
         <div className="fixed inset-0 z-50 bg-black w-screen h-screen overflow-hidden">
           <div className="relative w-full h-full bg-black overflow-hidden">
             <TourNav
-              label={selectedTour.label}
+              labelKey={selectedTour.labelKey}
               uri={selectedTour.uri}
               img={selectedTour.img}
             />

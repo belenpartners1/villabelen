@@ -1,9 +1,12 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
+import { useTranslations } from "next-intl";
 import { FaChevronLeft } from "react-icons/fa";
 
 const BackButton = () => {
+  const t = useTranslations("common");
+
   return (
     <Link
       href="/"
@@ -12,7 +15,7 @@ const BackButton = () => {
       className="absolute top-4 left-4 md:top-8 flex items-center gap-1 md:gap-2 z-10 bg-black/50 backdrop-blur-md px-3 py-2 text-lg md:text-2xl rounded-lg text-white hover:bg-black/20 transition"
     >
       <FaChevronLeft />
-      <p>Ana Sayfa</p>
+      <p>{t("homePage")}</p>
     </Link>
   );
 };

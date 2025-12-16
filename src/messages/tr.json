@@ -1,0 +1,24 @@
+{
+  "home": {
+    "title": "Beytepe Satılık Villa Ankara - Villa Satılık Beytepe Ankara"
+  },
+  "nav": {
+    "catalog": "Katalog",
+    "tour": "Sanal Tur",
+    "video": "Video",
+    "location": "Lokasyon"
+  },
+  "tour": {
+    "outdoor": "Dış Mekan",
+    "basement2": "-2. Kat",
+    "basement1": "-1. Kat",
+    "groundFloor": "Zemin Kat",
+    "firstFloor": "1. Kat",
+    "roofFloor": "Çatı Katı"
+  },
+  "common": {
+    "logoAlt": "Villa Belen Logo",
+    "back": "Geri",
+    "homePage": "Ana Sayfa"
+  }
+}

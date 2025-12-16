@@ -1,0 +1,24 @@
+{
+  "home": {
+    "title": "Beytepe Villa for Sale Ankara - Villa for Sale Beytepe Ankara"
+  },
+  "nav": {
+    "catalog": "Catalog",
+    "tour": "Virtual Tour",
+    "video": "Video",
+    "location": "Location"
+  },
+  "tour": {
+    "outdoor": "Outdoor",
+    "basement2": "-2nd Floor",
+    "basement1": "-1st Floor",
+    "groundFloor": "Ground Floor",
+    "firstFloor": "1st Floor",
+    "roofFloor": "Roof Floor"
+  },
+  "common": {
+    "logoAlt": "Villa Belen Logo",
+    "back": "Back",
+    "homePage": "Home Page"
+  }
+}
