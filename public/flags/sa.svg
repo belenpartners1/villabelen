@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600">
+  <rect width="900" height="600" fill="#165B33"/>
+  <g fill="#fff">
+    <text x="450" y="200" font-size="120" text-anchor="middle" font-family="Arial">&#x0644;&#x0627; &#x0625;&#x0644;&#x0647; &#x0625;&#x0644;&#x0627; &#x0627;&#x0644;&#x0644;&#x0647;</text>
+    <text x="450" y="290" font-size="100" text-anchor="middle" font-family="Arial">&#x0645;&#x062D;&#x0645;&#x062F; &#x0631;&#x0633;&#x0648;&#x0644; &#x0627;&#x0644;&#x0644;&#x0647;</text>
+    <g transform="translate(450, 420)">
+      <rect x="-120" y="-5" width="240" height="10"/>
+      <rect x="115" y="-60" width="10" height="120" rx="5"/>
+      <path d="M 115,0 Q 90,-40 60,-40 Q 30,-40 30,-20 Q 30,0 50,0 Q 30,0 30,20 Q 30,40 60,40 Q 90,40 115,0 Z"/>
+    </g>
+  </g>
+</svg>

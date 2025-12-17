@@ -3,11 +3,12 @@
 import { usePathname, useRouter } from "@/i18n/routing";
 import { useParams } from "next/navigation";
 import { useState } from "react";
+import Image from "next/image";
 
 const languages = [
-  { code: "tr", name: "Türkçe", flag: "🇹🇷" },
-  // { code: 'en', name: 'English', flag: '🇬🇧' },
-  { code: "ar", name: "العربية", flag: "🇸🇦" },
+  { code: "tr", name: "Türkçe", flag: "/flags/tr.svg" },
+  // { code: 'en', name: 'English', flag: '/flags/gb.svg' },
+  { code: "ar", name: "العربية", flag: "/flags/sa.svg" },
 ];
 
 export default function LanguageSwitcher() {
@@ -31,7 +32,13 @@ export default function LanguageSwitcher() {
         onClick={() => setIsOpen(!isOpen)}
         className="bg-white/20 backdrop-blur-md px-4 py-2 rounded-lg flex items-center gap-2 text-white hover:bg-white/30 transition-all duration-300"
       >
-        <span className="text-xl">{currentLanguage.flag}</span>
+        <Image
+          src={currentLanguage.flag}
+          alt={currentLanguage.name}
+          width={24}
+          height={16}
+          className="rounded-sm"
+        />
         <span className="hidden sm:inline">{currentLanguage.name}</span>
         <svg
           className={`w-4 h-4 transition-transform ${
@@ -60,7 +67,13 @@ export default function LanguageSwitcher() {
                 lang.code === currentLocale ? "bg-white/30 font-semibold" : ""
               }`}
             >
-              <span className="text-xl">{lang.flag}</span>
+              <Image
+                src={lang.flag}
+                alt={lang.name}
+                width={24}
+                height={16}
+                className="rounded-sm"
+              />
               <span className="text-gray-800">{lang.name}</span>
             </button>
           ))}
