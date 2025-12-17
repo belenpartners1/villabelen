@@ -5,7 +5,7 @@ import HTMLFlipBook from "react-pageflip";
 
 const flippingTime = 900;
 
-const FlipBook = ({ pages = [] }) => {
+const FlipBook = ({ pages = [], isRTL = false }) => {
   const [pageWidth, setPageWidth] = useState(0);
   const [pageHeight, setPageHeight] = useState(0);
   const [imagesLoaded, setImagesLoaded] = useState(false);
@@ -99,12 +99,17 @@ const FlipBook = ({ pages = [] }) => {
     const x = e.clientX;
     const mid = rect ? rect.left + rect.width / 2 : window.innerWidth / 2;
     isFlippingRef.current = true;
-    if (x < mid) api.flipPrev();
-    else api.flipNext();
+    if (isRTL) {
+      if (x < mid) api.flipNext();
+      else api.flipPrev();
+    } else {
+      if (x < mid) api.flipPrev();
+      else api.flipNext();
+    }
     setTimeout(() => {
       isFlippingRef.current = false;
     }, flippingTime * 0.9);
-  }, []);
+  }, [isRTL]);
 
   if (!imagesLoaded || pageWidth === 0 || pageHeight === 0) {
     return <div>Yükleniyor…</div>;
@@ -215,7 +220,7 @@ const FlipBook = ({ pages = [] }) => {
         <button
           onClick={(e) => {
             e.stopPropagation();
-            bookRef.current?.pageFlip()?.flipPrev();
+            isRTL ? bookRef.current?.pageFlip()?.flipNext() : bookRef.current?.pageFlip()?.flipPrev();
           }}
           style={{
             background: "rgba(0,0,0,0.6)",
@@ -233,7 +238,7 @@ const FlipBook = ({ pages = [] }) => {
         <button
           onClick={(e) => {
             e.stopPropagation();
-            bookRef.current?.pageFlip()?.flipNext();
+            isRTL ? bookRef.current?.pageFlip()?.flipPrev() : bookRef.current?.pageFlip()?.flipNext();
           }}
           style={{
             background: "rgba(0,0,0,0.6)",
