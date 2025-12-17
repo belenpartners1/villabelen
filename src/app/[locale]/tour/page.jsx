@@ -12,7 +12,7 @@ async function TourContent({ searchParams }) {
   const tourId = params.tour;
 
   const selectedTour = tourId
-    ? tourData.find((item) => item.uri === `/${tourId}`)
+    ? tourData.find((item) => item.uri === tourId)
     : null;
 
   return (

@@ -1,6 +1,6 @@
 // components/TourPageClient.jsx
 "use client";
-import { useRouter } from "next/navigation";
+import { useRouter } from "@/i18n/routing";
 import { useTranslations } from 'next-intl';
 import { TourButtons } from "@/components/TourButtons";
 
@@ -9,7 +9,7 @@ const TourPageClient = ({ tourData }) => {
   const t = useTranslations();
 
   const handleTourOpen = (item) => {
-    router.push(`/tour?tour=${item.uri.replace("/", "")}`, { scroll: false });
+    router.push(`/tour?tour=${item.uri}`, { scroll: false });
   };
 
   return (
