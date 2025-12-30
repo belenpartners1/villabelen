@@ -7,7 +7,7 @@ import Image from "next/image";
 
 const languages = [
   { code: "tr", name: "Türkçe", flag: "/flags/tr.svg" },
-  // { code: 'en', name: 'English', flag: '/flags/gb.svg' },
+  { code: "en", name: "English", flag: "/flags/gb.svg" },
   { code: "ar", name: "العربية", flag: "/flags/sa.svg" },
 ];
 
@@ -58,7 +58,7 @@ export default function LanguageSwitcher() {
       </button>
 
       {isOpen && (
-        <div className="absolute top-full mt-2 right-0 bg-white/90 backdrop-blur-md rounded-lg shadow-lg overflow-hidden max-w-[60px] md:min-w-[180px] z-50">
+        <div className="absolute top-full mt-2 right-0 bg-white/90 backdrop-blur-md rounded-lg shadow-lg overflow-hidden w-[60px] md:w-[140px] z-50">
           {languages.map((lang) => (
             <button
               key={lang.code}
